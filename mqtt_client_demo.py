@@ -1,12 +1,8 @@
-# MQTT Client demo
-# Continuously monitor two different MQTT topics for data,
-# check if the received data matches two predefined 'commands'
- 
 import paho.mqtt.client as mqtt
-import random
 
 # define static variable
-broker = "localhost"
+# broker = "localhost" # for local connection
+broker = "broker.hivemq.com"  # for online version
 port = 1883
 timeout = 60
 

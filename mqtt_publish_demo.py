@@ -1,11 +1,12 @@
-
 import paho.mqtt.client as mqtt
-import random
 from time import sleep
 
-broker = "localhost"
+# define static variable
+# broker = "localhost" # for local connection
+broker = "broker.hivemq.com"  # for online version
 port = 1883
 timeout = 60
+
 username = 'campuspedia'
 password = 'qlue'
 topic = "Campuspedia/lampu/status"
