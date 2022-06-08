@@ -1,5 +1,5 @@
-# campuspedia-mqtt-test
-Code for campuspedia x qlue event using mqtt with python
+# mqtt-test
+Code for using mqtt with python
 
 # installation prequisites
 dont forget to install mosquitto for the broker 
