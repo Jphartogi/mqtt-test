@@ -13,3 +13,5 @@ sudo apt-get install python3-pip # for those who haven't install pip in their sy
 sudo pip3 install paho-mqtt
 ```
 
+# Important!
+> Jangan lupa mengganti id dari client ("device0" dan "device1") agar tidak terkick dari broker
