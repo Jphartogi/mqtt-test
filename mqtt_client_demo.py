@@ -2,14 +2,14 @@ import paho.mqtt.client as mqtt
 
 # define static variable
 # broker = "localhost" # for local connection
-broker = "broker.hivemq.com"  # for online version
+broker = "test.mosquitto.org"  # for online version
 port = 1883
 timeout = 60
 
-username = 'campuspedia'
-password = 'qlue'
+username = ''
+password = ''
 
-topic = "Campuspedia/lampu/status"
+topic = "test/lampu"
  
 # The callback for when the client receives a CONNACK response from the server.
 def on_connect(client, userdata, flags, rc):
@@ -17,7 +17,7 @@ def on_connect(client, userdata, flags, rc):
  
     # Subscribing in on_connect() - if we lose the connection and
     # reconnect then subscriptions will be renewed.
-    client.subscribe(topic)
+    client.subscribe(topic,qos=2)
  
 # The callback for when a PUBLISH message is received from the server.
 def on_message(client, userdata, msg):
@@ -27,7 +27,6 @@ def on_message(client, userdata, msg):
         print("Lampu dinyalakan")
         # Do something
         
-
     elif payload_decoded == "Off":
         print("Lampu dimatikan")
         # Do something else
